@@ -47,7 +47,7 @@
     if (!id) {
         document.getElementById("content").innerHTML = "<p style='text-align:center;padding:40px'>No service selected.</p>";
     } else {
-        fetch("https://weddingmarket-backend.onrender.com/api/services/" + id)
+        fetch("/api/services/" + id)
             .then(function(res) { return res.json(); })
             .then(function(service) {
                 document.title = service.name;

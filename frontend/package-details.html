@@ -49,7 +49,7 @@
     if (!id) {
         document.getElementById("content").innerHTML = "<p style='text-align:center;padding:40px'>No package selected.</p>";
     } else {
-        fetch("https://weddingmarket-backend.onrender.com/api/packages/" + id)
+        fetch("/api/packages/" + id)
             .then(function(res) { return res.json(); })
             .then(function(pkg) {
                 document.title = pkg.name;

@@ -69,7 +69,7 @@
     if (!id) {
         document.getElementById("content").innerHTML = "<p style='text-align:center;padding:40px'>No product selected.</p>";
     } else {
-        fetch("https://weddingmarket-backend.onrender.com/api/products/" + id)
+        fetch("/api/products/" + id)
             .then(function(res) { return res.json(); })
             .then(function(product) {
                 document.title = product.name;
