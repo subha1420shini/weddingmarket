@@ -1,0 +1,39 @@
+name: Wedding Marketplace CI/CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install backend dependencies
+        run: |
+          cd backend
+          npm install
+
+      - name: Test backend is working
+        run: |
+          cd backend
+          node -e "require('./server.js')" &
+          sleep 2
+          curl http://localhost:5000/api/products
+          kill %1
+
+      - name: Build Docker images
+        run: |
+          docker compose build
+
+      - name: Success
+        run: echo "Build and tests passed successfully!"
