@@ -41,6 +41,7 @@ const services = [
         image: "images/saree.jpeg",
         description: "Expert saree draping services for the bride and family members. Covers all styles including Nivi, Bengali, Gujarati, and Coorgi draping by experienced professionals."
     },
+
 ];
 
 module.exports = services;

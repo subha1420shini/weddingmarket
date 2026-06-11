@@ -7,14 +7,14 @@
 
 body{
     font-family:Arial, sans-serif;
-    background:#e2b6a6;
-    color:#333;
+    background:#DDD1D9;
+    color:#1C0D19;
 }
 
 
 header{
-    background:#80B3AD;
-    color:white;
+    background:#2A1625;
+    color:#E39B74;
     padding:20px;
     margin-down:20px;
 }
@@ -70,7 +70,7 @@ button,
 .explore-btn{
     padding:12px 25px;
     border:none;
-    background:#ff4d6d;
+    background:#BA6B57;
     color:white;
     cursor:pointer;
     border-radius:5px;

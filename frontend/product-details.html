@@ -40,12 +40,12 @@
 <body>
 
 <header>
-    <h1>💍 Wedding Marketplace</h1>
+    <h1>∞ Forever Planned ∞</h1>
     <nav>
         <a href="index.html">Home</a>
         <a href="products.html">Products</a>
         <a href="services.html">Services</a>
-        <a href="dashboard.html">Dashboard</a>
+        <a href="dashboard.html">Packages</a>
         <a href="contact.html">Contact Us</a>
     </nav>
 </header>
@@ -75,7 +75,7 @@
                 document.title = product.name;
                 document.getElementById("content").innerHTML =
                     '<div class="detail-container">' +
-                    '<img src="' + product.image + '" alt="' + product.name + '">' +
+                    '<img src="http://localhost:8000/' + product.image + '" alt="' + product.name + '">' +
                     '<div class="detail-info">' +
                     '<h2>' + product.name + '</h2>' +
                     '<div class="detail-price">₹' + product.price.toLocaleString("en-IN") + '</div>' +
