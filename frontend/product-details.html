@@ -69,13 +69,13 @@
     if (!id) {
         document.getElementById("content").innerHTML = "<p style='text-align:center;padding:40px'>No product selected.</p>";
     } else {
-        fetch("http://localhost:5000/api/products/" + id)
+        fetch("/api/products/" + id)
             .then(function(res) { return res.json(); })
             .then(function(product) {
                 document.title = product.name;
                 document.getElementById("content").innerHTML =
                     '<div class="detail-container">' +
-                    '<img src="http://localhost:8000/' + product.image + '" alt="' + product.name + '">' +
+                    '<img src="' + product.image + '" alt="' + product.name + '">' +
                     '<div class="detail-info">' +
                     '<h2>' + product.name + '</h2>' +
                     '<div class="detail-price">₹' + product.price.toLocaleString("en-IN") + '</div>' +

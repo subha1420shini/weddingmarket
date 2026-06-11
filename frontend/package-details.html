@@ -49,13 +49,13 @@
     if (!id) {
         document.getElementById("content").innerHTML = "<p style='text-align:center;padding:40px'>No package selected.</p>";
     } else {
-        fetch("http://localhost:5000/api/packages/" + id)
+        fetch("/api/packages/" + id)
             .then(function(res) { return res.json(); })
             .then(function(pkg) {
                 document.title = pkg.name;
                 document.getElementById("content").innerHTML =
                     '<div class="detail-container">' +
-                    '<img src="http://localhost:8000/' + pkg.image + '" alt="' + pkg.name + '">' +
+                    '<img src="' + pkg.image + '" alt="' + pkg.name + '">' +
                     '<div class="detail-info">' +
                     '<h2>' + pkg.name + '</h2>' +
                     '<div class="detail-price">₹' + pkg.price.toLocaleString("en-IN") + '</div>' +
